@@ -4,10 +4,11 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request,'home.html')
+    nome = 'Daniel'
+    return render(request,'pages/home.html', context={'nome':nome})
 
 def login(request):
-    return render(request,'login.html')
+    return render(request,'pages/login.html')
 
 def registration(request):
-    return render(request,'registration.html')
+    return render(request,'pages/registration.html')
